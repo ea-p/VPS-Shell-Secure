@@ -11,13 +11,11 @@ echo "Enter your port"
 read PORT
 
 #Confirm prompt
-echo "Username is: $USER\nEmail is $EMAIL (optional)\nPort is: $PORT"
-while true; do
-    read -p "Do you wish to continue?" yn
+echo "Do you wish to install this program?"
+select yn in "Yes" "No"; do
     case $yn in
-        [Yy]* ) break;;
-        [Nn]* ) exit;;
-        * ) echo "Please answer yes or no.";;
+        Yes ) break;;
+        No ) exit;;
     esac
 done
 
