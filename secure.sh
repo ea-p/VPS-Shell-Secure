@@ -11,7 +11,7 @@ echo "Enter your port"
 read PORT
 
 #Confirm prompt
-echo -n `Username: $USER \nEmail (optional): $EMAIL \nPort: $PORT\nContinue (y/n)? `
+echo -en "Username: $USER \nEmail (optional): $EMAIL \nPort: $PORT\nContinue (y/n)?"
 read answer
 
 if ![ "$answer" != "${answer#[Yy]}" ] ;then
