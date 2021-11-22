@@ -11,13 +11,13 @@ echo "Enter your port"
 read PORT
 
 #Confirm prompt
-echo "Do you wish to install this program?"
-select yn in "Yes" "No"; do
-    case $yn in
-        Yes ) break;;
-        No ) exit;;
-    esac
-done
+echo -n `Username: $USER \nEmail (optional): $EMAIL \nPort: $PORT\nContinue (y/n)? `
+read answer
+
+if ![ "$answer" != "${answer#[Yy]}" ] ;then
+    exit
+fi
+
 
 
 #pause
