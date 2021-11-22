@@ -15,7 +15,7 @@ echo "Username is: $USER\nEmail is $EMAIL (optional)\nPort is: $PORT"
 while true; do
     read -p "Do you wish to continue?" yn
     case $yn in
-        [Yy]* ) continue; break;;
+        [Yy]* ) break;;
         [Nn]* ) exit;;
         * ) echo "Please answer yes or no.";;
     esac
